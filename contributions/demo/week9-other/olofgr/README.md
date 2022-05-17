@@ -23,3 +23,9 @@ technology. This would be something like showing how if a webserver is under
 a lot of strain it is possible for Sensu to react and give an appropriate 
 response. Monitoring technology is interesting for devops, especially when
 it is monitoring as code, and Sensu has not been deomnstrated yet. 
+
+
+### docker run command
+```
+docker run -p 3001:80 -p 3031:3031  --network="host" -it nginx-server
+```

@@ -1,0 +1,15 @@
+type: CheckConfig
+api_version: core/v2
+metadata:
+  name: nginx_service
+spec:
+  command: >
+    sensu-processes-check
+    --search
+    '[{"search_string": "nginx"}]'
+  subscriptions:
+  - webserver
+  interval: 15
+  publish: true
+  runtime_assets:
+  - sensu-processes-check
