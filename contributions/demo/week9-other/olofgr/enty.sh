@@ -1,7 +1,8 @@
 #!/bin/sh
 
-rc-service nginx start &
 
-sensu-agent start --backend-url ws://sensu-backend:8081 &
+nginx start -v
+
+sensu-agent start --backend-url ws://sensu-backend:8081 &> /dev/null &
 
 /bin/sh

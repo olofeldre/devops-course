@@ -26,6 +26,9 @@ it is monitoring as code, and Sensu has not been deomnstrated yet.
 
 
 ### docker run command
+
 ```
-docker run -p 3001:80 -p 3031:3031  --network="host" -it nginx-server
+docker build . -t nginx-sensu
+docker run  -it  -p 80:80 --link sensu-backend nginx-sensu
+
 ```
